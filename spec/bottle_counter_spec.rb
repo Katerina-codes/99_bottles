@@ -12,4 +12,9 @@ RSpec.describe BottleCounter do
     expect(bottle_counter.count_beers(98)).to eq("98 bottles of beer on the wall, 98 bottles of beer. Take one down and pass it around, 97 bottles of beer on the wall")
   end
 
+  it 'Returns 96 bottles of beer' do
+    bottle_counter = BottleCounter.new
+    expect(bottle_counter.count_beers(97)).to eq("97 bottles of beer on the wall, 97 bottles of beer. Take one down and pass it around, 96 bottles of beer on the wall")
+  end
+
 end
