@@ -4,7 +4,7 @@ RSpec.describe BottleCounter do
 
   let(:output) { StringIO.new }
   let(:bottle_counter) { BottleCounter.new(output) }
-  
+
   it 'Returns 98 bottles of beer' do
     bottle_counter.count_beers(99)
     expect(output.string).to include("99 bottles of beer on the wall, 99 bottles of beer. Take one down and pass it around, 98 bottles of beer on the wall")
@@ -27,7 +27,7 @@ RSpec.describe BottleCounter do
 
   it "returns no more bottle of beer" do
     bottle_counter.count_beers(0)
-    expect(output.string).to include("no more bottles of beer on the wall, no more  bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall.")
+    expect(output.string).to include("no more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall.")
   end
 
 end
