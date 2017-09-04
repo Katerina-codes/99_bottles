@@ -14,6 +14,11 @@ class BottleCounter
     beer_amount -= 1
   end
 
+  def no_more_bottles(beer_amount)
+    @output.puts "no more bottles of beer on the wall, no more  bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall."
+    beer_amount -= 1
+  end
+
   def count_beers(beer_amount)
     until beer_amount < 0
       if beer_amount > 1
@@ -21,8 +26,7 @@ class BottleCounter
       elsif beer_amount == 1
         beer_amount = one_bottle(beer_amount)
       else
-        @output.puts "no more bottles of beer on the wall, no more  bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall."
-        beer_amount -= 1
+        beer_amount = no_more_bottles(beer_amount)
       end
     end
   end
