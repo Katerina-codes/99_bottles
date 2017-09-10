@@ -32,3 +32,6 @@ class BottleCounter
   end
 
 end
+
+
+BottleCounter.new.count_beers(99)
